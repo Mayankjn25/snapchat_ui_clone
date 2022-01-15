@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:snapchat_ui_clone/data/stories_json.dart';
+import 'package:snapchat_ui_clone/pages/story_detail_page.dart';
 import 'package:snapchat_ui_clone/theme/colors.dart';
 
 class StoriesPage extends StatefulWidget {
-  const StoriesPage({ Key? key }) : super(key: key);
+  const StoriesPage({Key? key}) : super(key: key);
 
   @override
   _StoriesPageState createState() => _StoriesPageState();
@@ -49,14 +51,16 @@ class _StoriesPageState extends State<StoriesPage> {
                 children: List.generate(stories_data.length, (index) {
                   return GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //     context,
-                      //     PageTransition(
-                      //         type: PageTransitionType.scale,
-                      //         alignment: Alignment.bottomCenter,
-                      //         child: StoryDetailPage(
-                      //           videoUrl: stories_data[index]['videoUrl'],
-                      //         )));
+                      Navigator.push(
+                        context,
+                        PageTransition(
+                          type: PageTransitionType.scale,
+                          alignment: Alignment.bottomCenter,
+                          child: StoryDetailPage(
+                            videoUrl: stories_data[index]['videoUrl'],
+                          ),
+                        ),
+                      );
                     },
                     child: SizedBox(
                       width: (size.width - 30) / 2,

@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:snapchat_ui_clone/pages/camera_page.dart';
+import 'package:snapchat_ui_clone/pages/chat_page.dart';
+import 'package:snapchat_ui_clone/pages/discover_page.dart';
+import 'package:snapchat_ui_clone/pages/map_page.dart';
 import 'package:snapchat_ui_clone/pages/stories_page.dart';
 import 'package:snapchat_ui_clone/theme/colors.dart';
 import 'package:flutter_font_icons/flutter_font_icons.dart';
@@ -14,12 +18,11 @@ class _RootAppState extends State<RootApp> {
   int pageIndex = 0;
 
   List<Widget> pages = [
-    //MapPage(),
-    //ChatPage(),
-    //CameraPage(),
-    // ChatPage(),
-    StoriesPage(),
-    //DiscoverPage()
+    MapPage(),
+    ChatPage(),
+     CameraPage(),
+     StoriesPage(),
+    DiscoverPage()
   ];
 
   @override

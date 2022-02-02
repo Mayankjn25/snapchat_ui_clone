@@ -3,6 +3,8 @@
    <application
         android:label="snapchat_ui_clone"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyA2DSm35lBIjjXw_tQe5XZ-WQM3oBwB81g"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

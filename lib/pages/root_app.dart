@@ -15,7 +15,7 @@ class RootApp extends StatefulWidget {
 }
 
 class _RootAppState extends State<RootApp> {
-  int pageIndex = 0;
+  int pageIndex = 2;
 
   List<Widget> pages = [
     MapPage(),
